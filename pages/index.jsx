@@ -41,6 +41,44 @@ export default function Home() {
                 'Helped organize the business and entrepreneurship fest of NITK, with over 1000+ participants.',
               ]}
             />
+            <h2 className="font-medium text-2xl text-gray-700 uppercase mt-8 mb-2">Projects</h2>
+            <ProjectSection
+              title = "COSH NITK Website"
+              duration="Dec 2021 - Jan 2022"
+              tech="ReactJS, Firebase, Nginx, Git"
+              website_link='https://cosh.nitk.ac.in/'
+              code_link='https://github.com/COSH-NITK/cosh-website'
+              points = {[
+                'Designed and developed a web application for university having 100+ monthly visitors.',
+                'Collaborated with university faculty and stakeholders to gather requirements and plan process.',
+                'Built the application with ReactJS as the frontend and Firestore Firebase as datasource.',
+                'Integrated the application with Ghost blogging CMS and Twitter APIs.',
+                'Deployed the entire project on a container running Nginix, and worked on Search Engine Optimisation.'
+              ]}
+            />
+            <ProjectSection
+              title = "Virtual Try On"
+              duration="Mar 2022 - Apr 2022"
+              tech="Flutter, Flask, Snapchat Lens, Blender, Unity, Git"
+              code_link='https://github.com/aadilkhalifa/virtual-try-on'
+              points = {[
+                'Developed a mobile application that helps users measure shoe size and try on footwear using AR.',
+                'Explored image processing techniques to measure shoe size from a single image given a known reference object.',
+                'Worked on creating and integrating Snapchat filters using Snapchat lens to allow users try on footware using AR.',
+                'Added a feedback module to the app and performed user and usability testing of the app.',
+              ]}
+            />
+            <ProjectSection
+              title = "Crop Prediction"
+              duration="Nov 2021 - Dec 2021"
+              tech="ReactJS, Flask, Python, Git"
+              code_link='https://github.com/aadilkhalifa/crop-prediction'
+              points = {[
+                'Developed an application to help farmers get a crop/fertilizer recommendation based on soil and location details',
+                'Explored and analysed several machine learning algorithms to generate best recommendation model.',
+                'Integrated with Mapbox API & OpenWeatherMap API to get additional details that is input to the model.',
+              ]}
+            />
           </div>
         </div>
       </div>
@@ -61,6 +99,36 @@ function ExperienceSection({job_title, company_name, duration, points}){
                 points.map(point => <li>{point}</li>)
               }
             </ol>
+    </>
+  )
+}
+function ProjectSection({title, duration, tech, website_link, code_link, points}){
+  return (
+    <>
+      <div className="flex mt-4 justify-between">
+          <h3 className="text-md text-gray-700 font-medium">{title}</h3>
+          <p className="text-md text-gray-400 text-sm">{duration}</p>
+      </div>
+      <div className="flex justify-between">
+        <h4 className="text-gray-400 text-sm">{tech}</h4>
+        <span>
+          {
+            website_link
+            ? <a href="https://cosh.nitk.ac.in/" className="text-gray-400 text-sm underline ml-2">Website link</a>
+            : null
+          }
+          {
+            code_link
+            ? <a href="https://github.com/COSH-NITK/cosh-website" className="text-gray-400 text-sm underline ml-2">Code link</a>
+            : null
+          }
+        </span>
+      </div>
+      <ol className="pl-10   list-disc text-gray-600 text-sm mt-2">
+        {
+          points.map(point => <li>{point}</li>)
+        }
+      </ol>
     </>
   )
 }
