@@ -91,6 +91,15 @@ export default function Home() {
                 'Analysed compared our algorithm with traditional algorithm and found a 23% decrease in average wait time.',
               ]}
             />
+            <h2 className="font-medium text-2xl text-gray-700 uppercase mt-8 mb-2">Technical Skills</h2>
+            <h3 className="flex-1 text-md text-gray-700 font-medium mt-2">Languages</h3>
+            <p className="text-gray-600 text-sm">Python • C/C++ • SQL • JavaScript • HTML/CSS • C# • Dart</p>
+            <h3 className="flex-1 text-md text-gray-700 font-medium mt-2">Frameworks</h3>
+            <p className="text-gray-600 text-sm">React • Node.js • Express • Flask • Flutter • ASP.NET</p>
+            <h3 className="flex-1 text-md text-gray-700 font-medium mt-2">Developer Tools</h3>
+            <p className="text-gray-600 text-sm">Git • Docker • VS Code • Visual Studio</p>
+            <h3 className="flex-1 text-md text-gray-700 font-medium mt-2">Libraries</h3>
+            <p className="text-gray-600 text-sm">Tailwind • Pandas • NumPy • Matplotlib</p>
           </div>
         </div>
       </div>
@@ -136,7 +145,7 @@ function ProjectSection({title, duration, tech, website_link, code_link, points}
           }
         </span>
       </div>
-      <ol className="pl-10   list-disc text-gray-600 text-sm mt-2">
+      <ol className="pl-10 list-disc text-gray-600 text-sm mt-2">
         {
           points.map((point, i) => <li key={i}>{point}</li>)
         }
@@ -156,7 +165,7 @@ function PaperSection({title, duration, tech, paper_link, points}){
         <span>
           {
             paper_link
-            ? <a href="https://cosh.nitk.ac.in/" className="text-gray-400 text-sm underline ml-2">Website link</a>
+            ? <a href="https://cosh.nitk.ac.in/" className="text-gray-400 text-sm underline ml-2">Paper link</a>
             : null
           }
         </span>
