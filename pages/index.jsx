@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <div className="bg w-full bg-slate-100 p-8">
       <div className="wrapper max-w-5xl bg-white min-h-screen my-0 mx-auto drop-shadow-sm flex">
-        <div className="left max-w-full w-72 bg-gray-600 text-white">
-          <div className='p-8 flex flex-col items-center bg-gray-700'>
+        <div className="left max-w-full w-72 bg-gray-700 text-white">
+          <div className='p-8 flex flex-col items-center'>
             <Image
               src="/../public/image.png"
               alt="profile picture"
@@ -20,7 +20,7 @@ export default function Home() {
             <h2 className="text-2xl mt-2">Aadil Khalifa</h2>
             <p className='font-light text-sm'>Learning software engineering.</p>
           </div>
-          <div className="p-8">
+          <div className="p-8 bg-gray-600">
             <div className="flex items-center">
               <AiFillMail className="mr-2" />
               <a href="mailto:aadilkhalifa@gmail.com">aadilkhalifa@gmail.com</a>
@@ -33,6 +33,12 @@ export default function Home() {
               <AiFillGithub className="mr-2" />
               <a href="https://github.com/aadilkhalifa" target="_blank" rel="noreferrer">aadilkhalifa</a>
             </div>
+          </div>
+          <div className="p-8 flex flex-col items-start">
+            <h2 className='uppercase font-medium text-lg'>Education</h2>
+            <h3 className='text-sm mt-4'>B.Tech in Information Technology Engineering</h3>
+            <h3 className='text-sm'>(Minors in Management)</h3>
+            <p className='text-sm text-slate-200 mt-2'>2019 - 2023</p>
           </div>
         </div>
         <div className="right flex-1 p-16">
