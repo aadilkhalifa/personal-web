@@ -79,6 +79,18 @@ export default function Home() {
                 'Integrated with Mapbox API & OpenWeatherMap API to get additional details that is input to the model.',
               ]}
             />
+            <h2 className="font-medium text-2xl text-gray-700 uppercase mt-8 mb-2">Published Papers</h2>
+            <PaperSection
+              title='Smart Traffic Management System Using Multithreading and IPC'
+              duration = 'Jul 2021'
+              paper_link = 'https://ieeexplore.ieee.org/document/9579506'
+              points = {[
+                'Developed a novel algorithm to help reduce the traffic congestion at intersections based on vehicle density.',
+                'Implemented traffic visualisation to test and record static waiting time for vehicles.',
+                'Designed and developed an interface for users to view traffic information and suggest best route.',
+                'Analysed compared our algorithm with traditional algorithm and found a 23% decrease in average wait time.',
+              ]}
+            />
           </div>
         </div>
       </div>
@@ -96,7 +108,7 @@ function ExperienceSection({job_title, company_name, duration, points}){
             <h4 className="text-gray-400 text-sm">{company_name}</h4>
             <ol className="pl-10   list-disc text-gray-600 text-sm mt-2">
               {
-                points.map(point => <li>{point}</li>)
+                points.map((point, i) => <li key={i}>{point}</li>)
               }
             </ol>
     </>
@@ -126,7 +138,32 @@ function ProjectSection({title, duration, tech, website_link, code_link, points}
       </div>
       <ol className="pl-10   list-disc text-gray-600 text-sm mt-2">
         {
-          points.map(point => <li>{point}</li>)
+          points.map((point, i) => <li key={i}>{point}</li>)
+        }
+      </ol>
+    </>
+  )
+}
+function PaperSection({title, duration, tech, paper_link, points}){
+  return (
+    <>
+      <div className="flex mt-4 justify-between">
+          <h3 className="text-md text-gray-700 font-medium">{title}</h3>
+          <p className="text-md text-gray-400 text-sm">{duration}</p>
+      </div>
+      <div className="flex justify-between">
+        <h4 className="text-gray-400 text-sm">{tech}</h4>
+        <span>
+          {
+            paper_link
+            ? <a href="https://cosh.nitk.ac.in/" className="text-gray-400 text-sm underline ml-2">Website link</a>
+            : null
+          }
+        </span>
+      </div>
+      <ol className="pl-10   list-disc text-gray-600 text-sm mt-2">
+        {
+          points.map((point, i) => <li key={i}>{point}</li>)
         }
       </ol>
     </>
