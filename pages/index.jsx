@@ -1,19 +1,46 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import '../styles/Home.module.css'
+
+import { AiFillMail, AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 
 export default function Home() {
   return (
     <div className="bg w-full bg-slate-100 p-8">
       <div className="wrapper max-w-5xl bg-white min-h-screen my-0 mx-auto drop-shadow-sm flex">
-        <div className="left max-w-full w-72 bg-gray-700 text-white">
-          left
+        <div className="left max-w-full w-72 bg-gray-600 text-white">
+          <div className='p-8 flex flex-col items-center bg-gray-700'>
+            <Image
+              src="/../public/image.png"
+              alt="profile picture"
+              width={100}
+              height={100}
+              className="rounded-full"
+            />
+            <h2 className="text-2xl mt-2">Aadil Khalifa</h2>
+            <p className='font-light text-sm'>Learning software engineering.</p>
+          </div>
+          <div className="p-8">
+            <div className="flex items-center">
+              <AiFillMail className="mr-2" />
+              <a href="mailto:aadilkhalifa@gmail.com">aadilkhalifa@gmail.com</a>
+            </div>
+            <div className="flex items-center mt-2">
+              <AiFillLinkedin className="mr-2" />
+              <a href="https://www.linkedin.com/in/aadil-khalifa-7361031b6/" target="_blank" rel="noreferrer">Aadil Khalifa</a>
+            </div>
+            <div className="flex items-center mt-2">
+              <AiFillGithub className="mr-2" />
+              <a href="https://github.com/aadilkhalifa" target="_blank" rel="noreferrer">aadilkhalifa</a>
+            </div>
+          </div>
         </div>
         <div className="right flex-1 p-16">
           <div>
             <h2 className="font-medium text-2xl text-gray-700 uppercase mb-2">Experiences</h2>
             <ExperienceSection
               job_title="Software Development Intern"
-              duration="May 2022 – July 2022"
+              duration="May 2022 - July 2022"
               company_name="GEP Worldwide, Mumbai, India"
               points = {[
                 'Worked on enhancements to an SQL engine on .NET framework, retrieving report data from Databricks.',
@@ -95,7 +122,7 @@ export default function Home() {
             <h3 className="flex-1 text-md text-gray-700 font-medium mt-2">Languages</h3>
             <p className="text-gray-600 text-sm">Python • C/C++ • SQL • JavaScript • HTML/CSS • C# • Dart</p>
             <h3 className="flex-1 text-md text-gray-700 font-medium mt-2">Frameworks</h3>
-            <p className="text-gray-600 text-sm">React • Node.js • Express • Flask • Flutter • ASP.NET</p>
+            <p className="text-gray-600 text-sm">ReactJS • NextJS • Node.js • Express • Flask • Flutter • ASP.NET</p>
             <h3 className="flex-1 text-md text-gray-700 font-medium mt-2">Developer Tools</h3>
             <p className="text-gray-600 text-sm">Git • Docker • VS Code • Visual Studio</p>
             <h3 className="flex-1 text-md text-gray-700 font-medium mt-2">Libraries</h3>
